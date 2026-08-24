@@ -58,7 +58,8 @@ function updateCity(event) {
       <div class="date">${moment().tz("America/New_York").format("dddd MMMM Do, YYYY")}</div>
     </div>
     <div class="time">${moment().tz("America/New_York").format("hh:mm:ss")}<small>${moment().tz("America/New_York").format("A")}</small></div>
-  </div>`;
+  </div>
+  <a href="/">All cities</a>`;
 }
 
 updateTime();
