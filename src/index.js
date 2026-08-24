@@ -3,7 +3,7 @@ function updateTime() {
 let nycElement = document.querySelector("#new-york");
 if (nycElement) {
 let nycDateElement = nycElement.querySelector(".date");
-nycDateElement.innerHTML = moment().format("dddd MMMM Do, YYYY");
+nycDateElement.innerHTML = moment().tz("America/New_York").format("dddd MMMM Do, YYYY");
 let nycTime = moment().tz("America/New_York");
 
 let nycTimeElement= nycElement.querySelector(".time");
@@ -13,7 +13,7 @@ nycTimeElement.innerHTML = nycTime.format("hh:mm:ss [<small>]A[</small>]");
 let baElement = document.querySelector("#buenos-aires");
 if (baElement) {
 let baDateElement = baElement.querySelector(".date");
-baDateElement.innerHTML = moment().format("dddd MMMM Do, YYYY");
+baDateElement.innerHTML = moment().tz("America/Argentina/Buenos_Aires").format("dddd MMMM Do, YYYY");
 let baTime = moment().tz("America/Argentina/Buenos_Aires");
 
 let baTimeElement = baElement.querySelector(".time");
@@ -24,7 +24,7 @@ baTimeElement.innerHTML = baTime.format("hh:mm:ss [<small>]A[</small>]");
 let aucklandElement = document.querySelector("#auckland");
 if (aucklandElement) {
 let aucklandDateElement = aucklandElement.querySelector(".date");
-aucklandDateElement.innerHTML = moment().format("dddd MMMM Do, YYYY");
+aucklandDateElement.innerHTML = moment().tz("Pacific/Auckland").format("dddd MMMM Do, YYYY");
 let aucklandTime = moment().tz("Pacific/Auckland");
 
 let aucklandTimeElement = aucklandElement.querySelector(".time");
